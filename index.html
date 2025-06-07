@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeganScan - AI-Powered Product Scanner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌱 VeganScan</h1>
+            <p>Scan any product to check if it's vegan-friendly</p>
+        </header>
+
+        <div class="scanner-section">
+            <div class="camera-container">
+                <video id="camera" autoplay muted playsinline></video>
+                <canvas id="canvas" style="display: none;"></canvas>
+                <div class="scan-overlay">
+                    <div class="scan-frame"></div>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button id="captureBtn" class="capture-btn">
+                    📸 Scan Product
+                </button>
+                <button id="switchCameraBtn" class="switch-btn">
+                    🔄 Switch Camera
+                </button>
+            </div>
+        </div>
+
+        <div id="results" class="results-section" style="display: none;">
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Analyzing product...</p>
+            </div>
+            
+            <div id="analysisResults" class="analysis-results" style="display: none;">
+                <div class="product-info">
+                    <h2 id="productName">Product Analysis</h2>
+                    <div class="vegan-status" id="veganStatus">
+                        <!-- Vegan status will be populated here -->
+                    </div>
+                </div>
+                
+                <div class="company-info">
+                    <h3>Company Information</h3>
+                    <div id="companyDetails">
+                        <!-- Company details will be populated here -->
+                    </div>
+                </div>
+                
+                <div class="ingredients-info">
+                    <h3>Key Findings</h3>
+                    <div id="keyFindings">
+                        <!-- Key findings will be populated here -->
+                    </div>
+                </div>
+                
+                <button id="scanAgainBtn" class="scan-again-btn">
+                    🔄 Scan Another Product
+                </button>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="info-card">
+                <h3>How it works</h3>
+                <ul>
+                    <li>Point your camera at any product</li>
+                    <li>Take a clear photo of the packaging</li>
+                    <li>Get instant vegan analysis powered by AI</li>
+                    <li>Learn about the parent company's vegan stance</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
+
